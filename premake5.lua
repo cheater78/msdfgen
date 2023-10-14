@@ -114,7 +114,7 @@ project "msdfgen"
 
 	defines
 	{
-		"MSDFGEN_USE_CPP11"
+		"MSDFGEN_USE_CPP11",
 		"MSDFGEN_DISABLE_SVG"
 	}
 
