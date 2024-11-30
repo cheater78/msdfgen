@@ -30,7 +30,8 @@ out/
 /cmake-gen.bat
 /line-ending-check.bat
 
-bin/
-bin-int/
+*bin/*
+*bin-int/*
 *.vcxproj
 *.vcxproj.filters
+*Makefile
