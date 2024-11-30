@@ -1,8 +1,6 @@
 
 #include "EdgeHolder.h"
 
-#include <cstddef>
-
 namespace msdfgen {
 
 void EdgeHolder::swap(EdgeHolder &a, EdgeHolder &b) {
@@ -10,16 +8,6 @@ void EdgeHolder::swap(EdgeHolder &a, EdgeHolder &b) {
     a.edgeSegment = b.edgeSegment;
     b.edgeSegment = tmp;
 }
-
-EdgeHolder::EdgeHolder() : edgeSegment(NULL) { }
-
-EdgeHolder::EdgeHolder(EdgeSegment *segment) : edgeSegment(segment) { }
-
-EdgeHolder::EdgeHolder(Point2 p0, Point2 p1, EdgeColor edgeColor) : edgeSegment(new LinearSegment(p0, p1, edgeColor)) { }
-
-EdgeHolder::EdgeHolder(Point2 p0, Point2 p1, Point2 p2, EdgeColor edgeColor) : edgeSegment(new QuadraticSegment(p0, p1, p2, edgeColor)) { }
-
-EdgeHolder::EdgeHolder(Point2 p0, Point2 p1, Point2 p2, Point2 p3, EdgeColor edgeColor) : edgeSegment(new CubicSegment(p0, p1, p2, p3, edgeColor)) { }
 
 EdgeHolder::EdgeHolder(const EdgeHolder &orig) : edgeSegment(orig.edgeSegment ? orig.edgeSegment->clone() : NULL) { }
 
