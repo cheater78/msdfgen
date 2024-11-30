@@ -35,3 +35,5 @@ bin-int/*
 *.vcxproj
 *.vcxproj.filters
 *Makefile
+CMakeCache.txt
+CMakeFiles/

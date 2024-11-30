@@ -115,6 +115,7 @@ project "msdfgen"
 
 	defines
 	{
+		"_CRT_SECURE_NO_WARNINGS",
 		"MSDFGEN_USE_CPP11",
 		"MSDFGEN_DISABLE_SVG"
 	}
